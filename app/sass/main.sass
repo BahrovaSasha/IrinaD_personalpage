@@ -45,30 +45,32 @@ body
 	position: relative
 	color: #000
 	font-family: $default-font
-	overflow-x: hidden
 	margin: 0
 	a
 		text-decoration: none
 		&:hover
 			text-decoration: none
-
   img
     max-width: 100%
     height: auto
 
+h1, h3, p
+	margin: 0
+
 header
 	position: fixed
-	background: transparent
+	background-color: rgba(255, 230, 230, .7)
 	display: flex
 	align-items: center
 	justify-content: space-between
 	width: 100%
-
-
+main
+	width: 100%
+	overflow-x: hidden
 .header_left
 	display: flex
 	width: 50%
-	padding: 32px 32px 32px 60px
+	padding: 1.4rem 4rem 1.4rem 6rem
 	align-items: center
 	justify-content: space-between
 	.logo-name
@@ -76,7 +78,7 @@ header
 		font-size: 54px
 		color: $accent
 		line-height: normal
-		display: none
+		//display: none
 	.lang-switch
 		display: flex
 		.lang-button
@@ -91,25 +93,28 @@ header
 		font-family: $items-font
 		background: none
 		border: none
+		font-size: 1.6rem
 
 .header_right
 	display: flex
-	padding: 32px
+	padding: 1.4rem
 	width: 50%
 	justify-content: flex-end
 	align-items: center
 	.phones
 		display: flex
 		flex-direction: column
-		padding: 0 32px
+		padding: 0 3.2rem
 		a
-			//color: #000
-			color: $main-color
-			font-family: $items-font
+			color: #000
+			//color: $main-color
+			font-family: $default-font
+			line-height: 1.8
 	.call-button
 		background-color: $main-color
 		padding: 2rem 4.6rem
 		font-family: $items-font
+		font-size: 1.6rem
 		border: none
 
 .socials-links
@@ -123,46 +128,123 @@ header
 	a
 		color: $accent
 
+
+
 .main-section
 	background-color: $main-color
 	width: 100%
 	height: 100vh
+	min-height: 100%
 	display: flex
 	.main-section_left
 		padding: 11rem 4rem 10rem 10rem
-		width: 55%
+		width: 50%
+		@include xl
+			width: 60%
 		.top-info
-			width: 80%
+			//width: 80%
 			h1
 				color: $accent
 				font-family: $logo-font
 				font-size: 12rem
 				font-weight: 300
-				//line-height: normal
+				line-height: normal
 				margin: 0
-			.default-info
-				color: $default-text-color
-				margin: 0
+				@include xl
+					font-size: 9rem
 			.buy-button
 				background: none
 				border: none
 				text-decoration: underline
 				color: $accent
 				font-family: $items-font
+				font-size: 1.8rem
+				padding: 0
 		.bottom-info
 			display: flex
 			flex-wrap: wrap
+			padding: 6rem 0 2rem
+			margin: 0
+			li
+				width: 50%
+				list-style: none
+				padding: 1rem 0
+				display: flex
+				align-items: center
+				span
+					width: 12px
+					height: 12px
+					background-color: #fff
+					border-radius: $radius
+				p
+					line-height: 1.5
+					font-family: $items-font
+					color: $accent
+					font-size: 1.6rem
+					margin: 0
+					padding-left: 2rem
+
 	.main-section_right
 		width: 50%
+		height: inherit
 		display: flex
 		flex-direction: column
 		justify-content: flex-end
 		background: url("../img/irinadarsi-main.jpg"), rgba(255,231,231,0.8) 20% 40% no-repeat
 		background-size: cover
 		background-blend-mode: multiply
+		background-position: center
+		@include xl
+			width: 40%
 		.main-signature
 			margin: 0
-			padding: 3.2rem
+			padding: 1.4rem
 			font-family: $default-font
 			color: $main-color
-			font-size: 24px
+			font-size: 18px
+			line-height: 1.5
+.default-info
+	color: $default-text-color
+	margin: 0
+	padding: 3.2rem 0 1.4rem
+	width: 80%
+	@include xl
+		width: 100%
+
+
+.about-me
+	background-color: #fff
+	padding: 10rem 0 0 0
+.default-section_left
+	padding: 0 0 10rem 10rem
+.default-section_right
+	padding: 0 10rem 10rem 0
+	iframe
+		width: 100%
+		height: 100%
+		border: none
+		background-color: #e9ecef
+.default-head
+	font-family: $default-font
+	font-size: 3.6rem
+	font-weight: 300
+	padding: 3rem 0
+.about-features
+	background-color: $main-color
+	padding: 3rem
+	min-height: 40rem
+	display: flex
+	align-items: center
+	width: 100%
+	margin: 0
+.one-feature
+	height: 12rem
+	border-radius: $radius
+	display: flex
+	align-items: center
+	justify-content: center
+	p
+		color: $accent
+		font-family: $items-font
+		background-color: #fff
+		padding: 2rem
