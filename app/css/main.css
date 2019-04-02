@@ -2007,7 +2007,8 @@ header {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+  z-index: 100; }
 
 main {
   width: 100%;
@@ -2039,8 +2040,9 @@ main {
     display: -ms-flexbox;
     display: flex; }
     .header_left .lang-switch .lang-button {
-      font-family: "opensans-bold";
-      color: rgba(0, 0, 0, 0.6);
+      font-family: "opensans-light";
+      font-size: 1.8rem;
+      color: rgba(0, 0, 0, 0.4);
       padding: 0 22px;
       background: none;
       border: none; }
@@ -2050,7 +2052,8 @@ main {
     font-family: "opensans-bold";
     background: none;
     border: none;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    color: #590011; }
 
 .header_right {
   display: -webkit-box;
@@ -2082,12 +2085,13 @@ main {
       color: #000;
       font-family: "opensans-light";
       line-height: 1.8; }
-  .header_right .call-button {
-    background-color: #FFE6E6;
-    padding: 2rem 4.6rem;
-    font-family: "opensans-bold";
-    font-size: 1.6rem;
-    border: none; }
+
+.main-button {
+  background-color: #FFE6E6;
+  padding: 2rem 4.6rem;
+  font-family: "opensans-bold";
+  font-size: 1.6rem;
+  border: none; }
 
 .socials-links {
   position: absolute;
@@ -2121,7 +2125,7 @@ main {
   display: -ms-flexbox;
   display: flex; }
   .main-section .main-section_left {
-    padding: 11rem 4rem 10rem 10rem;
+    padding: 18rem 4rem 10rem 10rem;
     width: 50%; }
     @media only screen and (max-width: 1200px) {
       .main-section .main-section_left {
@@ -2152,7 +2156,7 @@ main {
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
-      padding: 6rem 0 2rem;
+      padding: 10rem 0 2rem;
       margin: 0; }
       .main-section .main-section_left .bottom-info li {
         width: 50%;
@@ -2225,10 +2229,10 @@ main {
   padding: 10rem 0 0 0; }
 
 .default-section_left {
-  padding: 0 0 10rem 10rem; }
+  padding: 0 0 4rem 10rem; }
 
 .default-section_right {
-  padding: 0 10rem 10rem 0; }
+  padding: 0 10rem 4rem 0; }
   .default-section_right iframe {
     width: 100%;
     height: 100%;
@@ -2242,9 +2246,9 @@ main {
   padding: 3rem 0; }
 
 .about-features {
-  background-color: #FFE6E6;
-  padding: 3rem;
-  min-height: 40rem;
+  padding: 0 10rem 6rem;
+  background-color: #fff;
+  min-height: 30rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2257,9 +2261,7 @@ main {
   margin: 0; }
 
 .one-feature {
-  height: 12rem;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
+  height: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2271,9 +2273,35 @@ main {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  padding: 1.5rem; }
   .one-feature p {
     color: #590011;
     font-family: "opensans-bold";
-    background-color: #fff;
-    padding: 2rem; }
+    background-color: #FFE6E6;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 4px;
+            border-radius: 4px; }
+
+.top-appeals {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #FFE6E6; }
+  .top-appeals .top-appeals_left {
+    width: 40%;
+    background: url("../img/irinadarsi-about.jpg"), rgba(255, 231, 231, 0.8) 20% 40% no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-blend-mode: multiply;
+    background-position: top; }
+  .top-appeals .top-appeals_right {
+    width: 60%;
+    padding: 10rem 10rem 13rem; }
+    .top-appeals .top-appeals_right .row {
+      width: 100%; }
+      .top-appeals .top-appeals_right .row .one-feature p {
+        background-color: #fff; }
