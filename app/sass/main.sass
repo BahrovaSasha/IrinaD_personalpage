@@ -93,6 +93,8 @@ h1, h3, p
 		white-space: nowrap
 		@include rwd(1400)
 			font-size: 36px
+		@include xl
+			font-size: 28px
 	.lang-switch
 		display: flex
 		.lang-button
@@ -102,6 +104,8 @@ h1, h3, p
 			padding: 0 22px
 			background: none
 			border: none
+			@include xl
+				font-size: 1.6rem
 		.lang-button.active
 			color: $accent
 .transparent-button
@@ -110,6 +114,7 @@ h1, h3, p
 	border: none
 	font-size: 1.6rem
 	color: $accent
+	white-space: nowrap
 
 .header_right
 	display: flex
@@ -126,13 +131,17 @@ h1, h3, p
 			font-family: $default-font
 			line-height: 1.8
 			transition: all .3s linear
+			@include xl
+				font-size: 1.6rem
 .main-button
 	background-color: $main-color
 	padding: 2rem 4.6rem
 	font-family: $items-font
 	font-size: 1.6rem
 	border: none
-	min-width: 26rem
+	min-width: 22rem
+	@include xl
+		padding: 1.3rem 2rem
 
 .main-header.active
 	transition: all .3s linear
@@ -250,17 +259,23 @@ main
 	margin: 0
 	padding: 3.2rem 0 1.4rem
 	width: 80%
+	@include rwd(1400)
+		padding: 1.4rem 0
 	@include xl
-		width: 100%
+		width: 90%
 
 
 .about-me
 	background-color: #fff
 	padding: 10rem 0 0 0
+.left-right-wrapper
+	display: flex
+	align-items: center
 .default-section_left
 	padding: 0 0 4rem 10rem
 .default-section_right
-	padding: 0 10rem 4rem 0
+	padding: 0 10rem 4rem 1rem
+	height: 300px
 	iframe
 		width: 100%
 		height: 100%
@@ -286,7 +301,7 @@ main
 	display: flex
 	align-items: center
 	justify-content: center
-	padding: 1.5rem
+	padding: .6rem
 	p
 		color: $accent
 		font-family: $items-font
@@ -295,6 +310,9 @@ main
 		width: 100%
 		height: 100%
 		border-radius: $radius
+		font-size: 1.4rem
+		line-height: 1.5
+
 
 
 
@@ -310,6 +328,8 @@ main
 	.top-appeals_right
 		width: 60%
 		padding: 10rem 10rem 13rem
+		@include xl
+			padding: 10rem 10rem 13rem 4rem
 		.row
 			width: 100%
 			.one-feature
@@ -387,7 +407,7 @@ main
 		.videofeedback-row
 			width: 100%
 			height: 300px
-			padding: 3.2rem 0
+			padding: 3.2rem 6rem
 			.onefeedback-wrapper
 				padding: 0 2rem
 				iframe
@@ -398,11 +418,8 @@ main
 					margin: 0
 	.facebook-subscribe
 		padding-top: 3.2rem
-		width: 90%
-		display: flex
-		justify-content: center
-		@include xs
-			width: 100%
+		width: 500px
+
 
 .button-wrapper
 	display: flex
