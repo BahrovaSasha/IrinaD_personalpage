@@ -2045,6 +2045,10 @@ h1, h3, p {
   @media only screen and (max-width: 992px) {
     .header_left {
       padding: 1.4rem; } }
+  @media only screen and (max-width: 576px) {
+    .header_left {
+      padding: .8rem;
+      width: 60%; } }
   .header_left .logo-name {
     font-family: "vidaloka";
     font-size: 54px;
@@ -2054,7 +2058,8 @@ h1, h3, p {
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
-    white-space: nowrap; }
+    white-space: nowrap;
+    padding-right: .4rem; }
     @media (max-width: 1400px) {
       .header_left .logo-name {
         font-size: 36px; } }
@@ -2072,6 +2077,9 @@ h1, h3, p {
     @media only screen and (max-width: 992px) {
       .header_left .lang-switch {
         padding: 0 2rem; } }
+    @media only screen and (max-width: 576px) {
+      .header_left .lang-switch {
+        padding: 0; } }
     .header_left .lang-switch .lang-button {
       font-family: "opensans-light";
       font-size: 1.8rem;
@@ -2095,10 +2103,15 @@ h1, h3, p {
   border: none;
   font-size: 1.6rem;
   color: #590011;
-  white-space: nowrap; }
+  white-space: nowrap;
+  padding: 0 1rem; }
   @media only screen and (max-width: 768px) {
     .transparent-button {
       font-size: 1.4rem; } }
+  @media only screen and (max-width: 576px) {
+    .transparent-button {
+      font-size: 1.2rem;
+      padding: 0 .4rem; } }
 
 .header_right {
   display: -webkit-box;
@@ -2115,6 +2128,9 @@ h1, h3, p {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media only screen and (max-width: 576px) {
+    .header_right {
+      padding: .8rem; } }
   .header_right .phones {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2169,6 +2185,17 @@ h1, h3, p {
     .main-button {
       font-size: 1.4rem;
       min-width: 10rem; } }
+
+#call-btn i {
+  display: none; }
+
+@media only screen and (max-width: 576px) {
+  #call-btn {
+    min-width: 4rem; }
+    #call-btn i {
+      display: block; }
+    #call-btn span {
+      display: none; } }
 
 .main-header.active {
   -webkit-transition: all .3s linear;
@@ -2242,6 +2269,13 @@ main {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  @media only screen and (max-width: 576px) {
+    .main-section {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .main-section .main-section_left {
     padding: 18rem 4rem 10rem 10rem;
     width: 50%; }
@@ -2259,6 +2293,10 @@ main {
       .main-section .main-section_left {
         width: 60%;
         padding: 12rem 1rem 4rem 6rem; } }
+    @media only screen and (max-width: 576px) {
+      .main-section .main-section_left {
+        width: 100%;
+        padding: 8rem 2rem 4rem 4rem; } }
     .main-section .main-section_left .top-info h1 {
       color: #590011;
       font-family: "vidaloka";
@@ -2365,6 +2403,10 @@ main {
       .main-section .main-section_right {
         background-position: 26% 50%;
         width: 40%; } }
+    @media only screen and (max-width: 576px) {
+      .main-section .main-section_right {
+        width: 100%;
+        height: 40rem; } }
     .main-section .main-section_right .main-signature {
       margin: 0;
       padding: 1.4rem;
@@ -2400,6 +2442,9 @@ main {
   @media only screen and (max-width: 1200px) {
     .about-me {
       padding: 6rem 0 0 0; } }
+  @media only screen and (max-width: 576px) {
+    .about-me {
+      padding: 4rem 0; } }
 
 .left-right-wrapper {
   display: -webkit-box;
@@ -2411,22 +2456,29 @@ main {
       -ms-flex-align: center;
           align-items: center; }
 
-.default-section_left {
+.about-me-section_left {
   padding: 0 0 4rem 10rem; }
   @media only screen and (max-width: 992px) {
-    .default-section_left {
+    .about-me-section_left {
       padding: 0 6rem 4rem; } }
   @media only screen and (max-width: 768px) {
-    .default-section_left {
+    .about-me-section_left {
       padding: 0 6rem 0; } }
+  @media only screen and (max-width: 576px) {
+    .about-me-section_left {
+      padding: 0 4rem 0 6rem; } }
 
-.default-section_right {
+.about-me-section_right {
   padding: 0 10rem 4rem 1rem;
   height: 300px; }
   @media only screen and (max-width: 992px) {
-    .default-section_right {
+    .about-me-section_right {
       padding: 0 6rem 4rem; } }
-  .default-section_right iframe {
+  @media only screen and (max-width: 576px) {
+    .about-me-section_right {
+      padding: 0 4rem 2rem 6rem;
+      height: 200px; } }
+  .about-me-section_right iframe {
     width: 100%;
     height: 100%;
     border: none;
@@ -2460,6 +2512,9 @@ main {
           align-items: center;
   width: 100%;
   margin: 0; }
+  @media only screen and (max-width: 576px) {
+    .about-features {
+      padding: 0 6rem; } }
 
 .one-feature {
   height: auto;
@@ -2507,6 +2562,9 @@ main {
     @media only screen and (max-width: 768px) {
       .top-appeals .top-appeals_left {
         background-position: 60% 50%; } }
+    @media only screen and (max-width: 576px) {
+      .top-appeals .top-appeals_left {
+        display: none; } }
   .top-appeals .top-appeals_right {
     width: 60%;
     padding: 10rem 10rem 13rem; }
@@ -2516,6 +2574,10 @@ main {
     @media only screen and (max-width: 992px) {
       .top-appeals .top-appeals_right {
         padding: 6rem 6rem 6rem 4rem; } }
+    @media only screen and (max-width: 576px) {
+      .top-appeals .top-appeals_right {
+        width: 100%;
+        padding: 4rem 6rem; } }
     .top-appeals .top-appeals_right .row {
       width: 100%;
       margin: 0; }
@@ -2543,6 +2605,9 @@ main {
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
               flex-direction: column; } }
+  @media only screen and (max-width: 576px) {
+    .subscribe-section {
+      padding: 4rem 4rem 4rem 6rem; } }
 
 .subscribe-section_left {
   width: 50%; }
@@ -2591,6 +2656,9 @@ main {
       .subscribe-section_right .buttons-wrap {
         width: 76%;
         padding-bottom: 0; } }
+    @media only screen and (max-width: 576px) {
+      .subscribe-section_right .buttons-wrap {
+        width: 100%; } }
 
 .gallery-section {
   padding: 10rem;
@@ -2601,6 +2669,9 @@ main {
   @media only screen and (max-width: 992px) {
     .gallery-section {
       padding: 6rem; } }
+  @media only screen and (max-width: 576px) {
+    .gallery-section {
+      padding: 4rem; } }
   .gallery-section .photo-wrapper {
     margin-top: 10rem;
     display: grid;
@@ -2614,13 +2685,24 @@ main {
     @media only screen and (max-width: 992px) {
       .gallery-section .photo-wrapper {
         grid-template-columns: 1fr 1fr; } }
+    @media only screen and (max-width: 576px) {
+      .gallery-section .photo-wrapper {
+        grid-template-rows: repeat(12, 200px);
+        grid-template-columns: 1fr;
+        margin-top: 2rem; } }
     .gallery-section .photo-wrapper .one-photo {
       background-color: #cbbde2;
       width: 100%; }
     .gallery-section .photo-wrapper .photo-item2 {
       grid-row: span 2; }
+      @media only screen and (max-width: 576px) {
+        .gallery-section .photo-wrapper .photo-item2 {
+          grid-row: span 1; } }
     .gallery-section .photo-wrapper .photo-item5 {
       grid-row: span 2; }
+      @media only screen and (max-width: 576px) {
+        .gallery-section .photo-wrapper .photo-item5 {
+          grid-row: span 1; } }
     .gallery-section .photo-wrapper .photo-item6 {
       grid-row: span 2;
       grid-column: span 2; }
@@ -2647,11 +2729,17 @@ main {
   @media only screen and (max-width: 1200px) {
     .videofeedback-section {
       padding: 6rem 0; } }
+  @media only screen and (max-width: 576px) {
+    .videofeedback-section {
+      padding: 4rem 0; } }
   .videofeedback-section .default-head {
     padding-left: 10rem; }
     @media only screen and (max-width: 992px) {
       .videofeedback-section .default-head {
         padding-left: 6rem; } }
+    @media only screen and (max-width: 576px) {
+      .videofeedback-section .default-head {
+        padding-left: 4rem; } }
   .videofeedback-section .videofeedback-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2669,6 +2757,9 @@ main {
     .videofeedback-section .videofeedback-wrapper .videofeedback-row {
       width: 100%;
       padding: 3.2rem 6rem; }
+      @media only screen and (max-width: 576px) {
+        .videofeedback-section .videofeedback-wrapper .videofeedback-row {
+          padding: 0 4rem; } }
       .videofeedback-section .videofeedback-wrapper .videofeedback-row .onefeedback-wrapper {
         padding: 0 2rem;
         height: 300px; }
@@ -2682,6 +2773,9 @@ main {
         @media only screen and (max-width: 768px) {
           .videofeedback-section .videofeedback-wrapper .videofeedback-row .onefeedback-wrapper {
             padding: 1.4rem 0; } }
+        @media only screen and (max-width: 576px) {
+          .videofeedback-section .videofeedback-wrapper .videofeedback-row .onefeedback-wrapper {
+            height: 200px; } }
         .videofeedback-section .videofeedback-wrapper .videofeedback-row .onefeedback-wrapper iframe {
           height: 100%;
           width: 100%;
@@ -2691,6 +2785,10 @@ main {
   .videofeedback-section .facebook-subscribe {
     padding-top: 6rem;
     width: 500px; }
+    @media only screen and (max-width: 576px) {
+      .videofeedback-section .facebook-subscribe {
+        padding-top: 3rem;
+        width: 300px; } }
 
 .button-wrapper {
   display: -webkit-box;
@@ -2708,6 +2806,13 @@ main {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  @media only screen and (max-width: 576px) {
+    .contacts-section {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .contacts-section .contacts-section_left {
     width: 50%;
     padding: 10rem 0 10rem 16rem; }
@@ -2717,6 +2822,10 @@ main {
     @media only screen and (max-width: 992px) {
       .contacts-section .contacts-section_left {
         padding: 6rem 0 6rem 6rem; } }
+    @media only screen and (max-width: 576px) {
+      .contacts-section .contacts-section_left {
+        padding: 4rem 4rem 2rem;
+        width: 100%; } }
   .contacts-section .contacts-section_right {
     width: 50%;
     padding: 10rem 16rem 10rem 0; }
@@ -2726,6 +2835,10 @@ main {
     @media only screen and (max-width: 992px) {
       .contacts-section .contacts-section_right {
         padding: 6rem 6rem 6rem 0; } }
+    @media only screen and (max-width: 576px) {
+      .contacts-section .contacts-section_right {
+        padding: 2rem 4rem 4rem;
+        width: 100%; } }
     .contacts-section .contacts-section_right .contacts-form {
       min-width: 24rem;
       width: 80%; }
