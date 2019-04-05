@@ -2207,6 +2207,9 @@ h1, h3, p {
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear; }
+  @media only screen and (max-width: 350px) {
+    .main-header.active .header_left .transparent-button {
+      display: none; } }
   .main-header.active .phones .phone-number {
     color: #000;
     -webkit-transition: all .3s linear;
@@ -2314,6 +2317,9 @@ main {
       @media only screen and (max-width: 992px) {
         .main-section .main-section_left .top-info h1 {
           font-size: 6rem; } }
+      @media only screen and (max-width: 350px) {
+        .main-section .main-section_left .top-info h1 {
+          font-size: 4rem; } }
     .main-section .main-section_left .top-info .buy-button {
       background: none;
       border: none;
@@ -2470,7 +2476,10 @@ main {
 
 .about-me-section_right {
   padding: 0 10rem 4rem 1rem;
-  height: 300px; }
+  height: 400px; }
+  @media only screen and (max-width: 1200px) {
+    .about-me-section_right {
+      height: 300px; } }
   @media only screen and (max-width: 992px) {
     .about-me-section_right {
       padding: 0 6rem 4rem; } }
@@ -2497,6 +2506,9 @@ main {
     .default-head {
       padding: 1rem 0;
       font-size: 2.4rem; } }
+  @media only screen and (max-width: 350px) {
+    .default-head {
+      font-size: 2rem; } }
 
 .about-features {
   padding: 0 10rem 6rem;
@@ -2515,6 +2527,9 @@ main {
   @media only screen and (max-width: 576px) {
     .about-features {
       padding: 0 6rem; } }
+  @media only screen and (max-width: 350px) {
+    .about-features {
+      padding: 0 4rem; } }
 
 .one-feature {
   height: auto;
@@ -2578,6 +2593,9 @@ main {
       .top-appeals .top-appeals_right {
         width: 100%;
         padding: 4rem 6rem; } }
+    @media only screen and (max-width: 350px) {
+      .top-appeals .top-appeals_right {
+        padding: 4rem; } }
     .top-appeals .top-appeals_right .row {
       width: 100%;
       margin: 0; }
@@ -2608,6 +2626,9 @@ main {
   @media only screen and (max-width: 576px) {
     .subscribe-section {
       padding: 4rem 4rem 4rem 6rem; } }
+  @media only screen and (max-width: 350px) {
+    .subscribe-section {
+      padding: 4rem 2rem 4rem 4rem; } }
 
 .subscribe-section_left {
   width: 50%; }
@@ -2789,6 +2810,9 @@ main {
       .videofeedback-section .facebook-subscribe {
         padding-top: 3rem;
         width: 300px; } }
+    @media only screen and (max-width: 350px) {
+      .videofeedback-section .facebook-subscribe {
+        width: 200px; } }
 
 .button-wrapper {
   display: -webkit-box;
@@ -2799,6 +2823,9 @@ main {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end; }
+  @media only screen and (max-width: 350px) {
+    .button-wrapper {
+      width: 200px; } }
 
 .contacts-section {
   background-color: #FFE6E6;
@@ -2839,6 +2866,9 @@ main {
       .contacts-section .contacts-section_right {
         padding: 2rem 4rem 4rem;
         width: 100%; } }
+    @media only screen and (max-width: 350px) {
+      .contacts-section .contacts-section_right {
+        padding: 2rem 2rem 4rem 4rem; } }
     .contacts-section .contacts-section_right .contacts-form {
       min-width: 24rem;
       width: 80%; }
@@ -2852,10 +2882,16 @@ main {
         .contacts-section .contacts-section_right .contacts-form .input-field input {
           width: inherit;
           padding: 1.4rem; }
+          @media only screen and (max-width: 350px) {
+            .contacts-section .contacts-section_right .contacts-form .input-field input {
+              width: 200px; } }
         .contacts-section .contacts-section_right .contacts-form .input-field textarea {
           width: inherit;
           height: 14rem;
           padding: 1.4rem; }
+          @media only screen and (max-width: 350px) {
+            .contacts-section .contacts-section_right .contacts-form .input-field textarea {
+              width: 200px; } }
 
 footer {
   background-color: #FFE6E6;
