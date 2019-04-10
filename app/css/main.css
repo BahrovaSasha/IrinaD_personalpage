@@ -2104,7 +2104,15 @@ h1, h3, p {
   font-size: 1.6rem;
   color: #590011;
   white-space: nowrap;
-  padding: 0 1rem; }
+  padding: 0 1rem;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear; }
+  .transparent-button:hover {
+    color: #fff;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear; }
   @media only screen and (max-width: 768px) {
     .transparent-button {
       font-size: 1.4rem; } }
@@ -2151,7 +2159,8 @@ h1, h3, p {
       line-height: 1.8;
       -webkit-transition: all .3s linear;
       -o-transition: all .3s linear;
-      transition: all .3s linear; }
+      transition: all .3s linear;
+      cursor: pointer; }
       @media only screen and (max-width: 1200px) {
         .header_right .phones .phone-number {
           font-size: 1.6rem; } }
@@ -2176,7 +2185,16 @@ h1, h3, p {
   font-size: 1.6rem;
   border: none;
   min-width: 22rem;
-  white-space: nowrap; }
+  white-space: nowrap;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear; }
+  .main-button:hover {
+    background-color: #fff;
+    color: #590011;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear; }
   @media only screen and (max-width: 1200px) {
     .main-button {
       padding: 1.3rem 2rem;
@@ -2219,8 +2237,8 @@ h1, h3, p {
 .socials-links {
   position: absolute;
   left: 0;
-  top: -webkit-calc(50vh - 68px);
-  top: calc(50vh - 68px);
+  top: -webkit-calc(50vh - 54px);
+  top: calc(50vh - 54px);
   padding: 1.4rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2249,7 +2267,8 @@ h1, h3, p {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    color: #590011; }
   @media only screen and (max-width: 992px) {
     .socials-links {
       padding: .8rem;
@@ -2257,8 +2276,41 @@ h1, h3, p {
   @media only screen and (max-width: 768px) {
     .socials-links {
       padding: 0; } }
-  .socials-links a {
-    color: #590011; }
+
+.arrow-top {
+  position: absolute;
+  right: 0;
+  top: -webkit-calc(50vh - 34px);
+  top: calc(50vh - 34px);
+  padding: 1.4rem;
+  cursor: pointer;
+  background: none;
+  border: none; }
+  .arrow-top:focus {
+    outline: none; }
+  .arrow-top i {
+    height: 40px;
+    width: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #590011;
+    font-size: 2.8rem; }
+  @media only screen and (max-width: 992px) {
+    .arrow-top {
+      padding: .8rem; } }
+  @media only screen and (max-width: 768px) {
+    .arrow-top {
+      padding: 0; } }
 
 main {
   width: 100%;
@@ -2842,7 +2894,18 @@ main {
               flex-direction: column; } }
   .contacts-section .contacts-section_left {
     width: 50%;
-    padding: 10rem 0 10rem 16rem; }
+    padding: 10rem 0 10rem 16rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .contacts-section .contacts-section_left .default-info {
+      cursor: pointer; }
     @media only screen and (max-width: 1200px) {
       .contacts-section .contacts-section_left {
         padding: 6rem 0 6rem 16rem; } }
@@ -2926,3 +2989,51 @@ footer {
     @media only screen and (max-width: 768px) {
       footer button {
         font-size: 1.4rem; } }
+
+.order-call-popup {
+  display: none; }
+
+.order-call-popup.active {
+  background-color: rgba(255, 230, 230, 0.8);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .order-call-popup.active .close-call-popup {
+    position: fixed;
+    right: 60px;
+    top: 60px;
+    background: none;
+    border: none;
+    color: #590011;
+    font-size: 3rem;
+    cursor: pointer; }
+    .order-call-popup.active .close-call-popup:focus {
+      outline: none; }
+  .order-call-popup.active .order-call-popup_wrap {
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: 0 0 10px rgba(89, 0, 17, 0.5);
+            box-shadow: 0 0 10px rgba(89, 0, 17, 0.5); }

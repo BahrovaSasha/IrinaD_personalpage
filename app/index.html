@@ -6,6 +6,8 @@
     <meta name="description" content="Irina Darsi. Psychologist, coach">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/favicon_IrinaDarsi.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon_IrinaDarsi-apple-touch-icon.png">
 </head>
 <body>
 <div id="fb-root"></div>
@@ -44,6 +46,9 @@
             <i class="fab fa-instagram"></i>
         </a>
     </div>
+    <button type="button" class="arrow-top">
+        <i class="fas fa-long-arrow-alt-up"></i>
+    </button>
 </header>
 
 <main>
@@ -223,9 +228,9 @@
     <section class="contacts-section">
         <div class="contacts-section_left">
             <h3 class="default-head">Контакты</h3>
-            <p class="default-info">+38 (097) 1234567</p>
-            <p class="default-info">+38 (097) 1234567</p>
-            <p class="default-info">tjyukui;@gmail.com</p>
+            <a href="tel:+380971234567" class="default-info">+38 (097) 1234567</a>
+            <a href="tel:+380971234567" class="default-info">+38 (097) 1234567</a>
+            <a href="#" class="default-info">tjyukui;@gmail.com</a>
         </div>
         <div class="contacts-section_right">
             <h3 class="default-head">Опишите ситуацию</h3>
@@ -246,16 +251,22 @@
             </form>
         </div>
     </section>
-
-
-    <footer>
-        <p class="default-info">Irina Darsi &#169;</p>
-        <div class="default-info">
-            <button type="button">Хочу стать клиентом</button>
-        </div>
-
-    </footer>
 </main>
+
+<footer>
+    <p class="default-info">Irina Darsi &#169;</p>
+    <div class="default-info">
+            <button type="button">Хочу стать клиентом</button>
+    </div>
+
+</footer>
+
+<div class="order-call-popup" id="call-popup">
+    <button class="close-call-popup">&#10006</button>
+    <div class="order-call-popup_wrap">
+
+    </div>
+</div>
 
 <script src="js\scripts.min.js"></script>
 <script src="js\common.js"></script>
