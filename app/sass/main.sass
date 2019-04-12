@@ -29,6 +29,9 @@
 	color: #999
 	opacity: 1
 
+*::-webkit-scrollbar
+	display: none
+
 input,textarea
 	border: none
 	border-radius: $radius
@@ -64,7 +67,9 @@ body
 
 h1, h3, p
 	margin: 0
-
+.fixed
+	position: fixed
+	width: 100%
 .main-header
 	transition: all .3s linear
 	position: fixed
@@ -137,6 +142,8 @@ h1, h3, p
 	&:hover
 		color: #fff
 		transition: all .3s linear
+	&:focus
+		outline: none
 	@include md
 		font-size: 1.4rem
 	@include sm
@@ -190,6 +197,8 @@ h1, h3, p
 		background-color: #fff
 		color: $accent
 		transition: all .3s linear
+	&:focus
+		outline: none
 	@include xl
 		padding: 1.3rem 2rem
 		min-width: 14rem
@@ -437,6 +446,7 @@ main
 		height: 300px
 	@include lg
 		padding: 0 6rem 4rem
+		height: 400px
 	@include sm
 		padding: 0 4rem 2rem 6rem
 		height: 200px
@@ -661,10 +671,12 @@ main
 				@include rwd(1400)
 					height: 240px
 				@include lg
-					height: 300px
-					padding: 1.4rem 6rem
+					height: 200px
+					padding: 0 1rem
+					//padding: 1.4rem 6rem
 				@include md
-					padding: 1.4rem 0
+					height: 300px
+					padding: 1.4rem 1rem
 				@include sm
 					height: 200px
 
@@ -687,6 +699,7 @@ main
 .button-wrapper
 	display: flex
 	justify-content: flex-end
+	width: 100%
 	@include xs
 		width: 200px
 .contacts-section
@@ -725,21 +738,28 @@ main
 			width: 80%
 			@include xl
 				width: 100%
-			.input-field
-				width: 100%
-				padding: 1rem 0
-				height: auto
-				input
-					width: inherit
-					padding: 1.4rem
-					@include xs
-						width: 200px
-				textarea
-					width: inherit
-					height: 14rem
-					padding: 1.4rem
-					@include xs
-						width: 200px
+
+.error-message
+	color: #FF0000
+	font-size: 1.4rem
+.submit-message
+	color: $accent
+	font-size: 1.6rem
+.input-field
+	width: 100%
+	padding: 1rem 0
+	height: auto
+	input
+		width: inherit
+		padding: 1.4rem
+		@include xs
+			width: 200px
+	textarea
+		width: inherit
+		height: 14rem
+		padding: 1.4rem
+		@include xs
+			width: 200px
 
 
 footer
@@ -765,12 +785,25 @@ footer
 		@include md
 			font-size: 1.4rem
 
+
+
+@keyframes fadein
+	0%
+		opacity: 0
+	100%
+		opacity: 1
+@keyframes fadeout
+	0%
+		opacity: 1
+	100%
+		opacity: 0
 .order-call-popup
 	display: none
+	animation: fadeout .3 ease-in-out
 .order-call-popup.active
 	//width: 100%
 	//height: 100vh
-	background-color: rgba(255, 230, 230, .8)
+	background-color: rgba(255, 255, 255, .9)
 	//opacity: .8
 	z-index: 1000
 	position: fixed
@@ -782,6 +815,8 @@ footer
 	flex-direction: column
 	align-items: center
 	justify-content: center
+	animation: fadein .3s ease-in-out
+	//opacity: 0
 	.close-call-popup
 		position: fixed
 		right: 60px
@@ -793,9 +828,23 @@ footer
 		cursor: pointer
 		&:focus
 			outline: none
+		@include sm
+			top: 30px
+			right: 30px
+			font-size: 2rem
 	.order-call-popup_wrap
-		background-color: #fff
-		width: 400px
-		height: 400px
+		background-color: $main-color
+		padding: 2rem
+		width: 80%
+		max-width: 400px
+		//width: 400px
+		//height: 400px
 		border-radius: $radius
 		box-shadow: 0 0 10px rgba(89, 0, 17, .5)
+		.callback-form
+			width: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
+			input
+				width: 100%

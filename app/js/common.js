@@ -24,12 +24,50 @@ $(document).ready(function(){
                $('body,html').animate({scrollTop: 0}, 800);
            });
        });
+    $('#call-btn').click(function() {
+        $('.order-call-popup').addClass('active');
+        $('body').addClass('fixed');
+    });
+    $('.close-call-popup').click(function(){
+        $('.order-call-popup').removeClass('active');
+        $('body').removeClass('fixed');
+    });
+    $('.videofeedback-row').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    autoplaySpeed: 4000,
+                }
+            }
+        ]
+    });
+/*
+    $('#call-btn').click(function() {
+        $('.order-call-popup').show(1000);
+        $('body').addClass('fixed');
+    });
+    $('.close-call-popup').click(function(){
+        $('.order-call-popup').hide(1000);
+        $('body').removeClass('fixed');
+    });
+*/
 
-
-
-
-
-
+/*
+    $('#call-btn').click(function() {
+        $('.order-call-popup').addClass('active', function () {
+            $(this).fadeTo({duration:1000},{opacity:[0,1]});
+        });
+        $('body').addClass('fixed');
+    });*/
 
 });
 

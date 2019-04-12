@@ -208,13 +208,16 @@
         <h3 class="default-head">Видеоотзывы моих клиентов</h3>
         <div class="videofeedback-wrapper">
             <div class="videofeedback-row row">
-                <div class="onefeedback-wrapper col-lg-4 col-sm-12">
+                <div class="onefeedback-wrapper">
                     <iframe></iframe>
                 </div>
-                <div class="onefeedback-wrapper col-lg-4 col-sm-12">
+                <div class="onefeedback-wrapper">
                     <iframe></iframe>
                 </div>
-                <div class="onefeedback-wrapper col-lg-4 col-sm-12">
+                <div class="onefeedback-wrapper">
+                    <iframe></iframe>
+                </div>
+                <div class="onefeedback-wrapper">
                     <iframe></iframe>
                 </div>
             </div>
@@ -236,6 +239,7 @@
             <h3 class="default-head">Опишите ситуацию</h3>
             <form class="contacts-form">
                 <span class="error-message"></span>
+                <span class="submit-message"></span>
                 <div class="input-field">
                     <input id="name" type="text" placeholder="Имя" required>
                 </div>
@@ -264,7 +268,19 @@
 <div class="order-call-popup" id="call-popup">
     <button class="close-call-popup">&#10006</button>
     <div class="order-call-popup_wrap">
-
+        <form class="callback-form">
+            <span class="error-message"></span>
+            <span class="submit-message"></span>
+            <div class="input-field">
+                <input id="name" type="text" placeholder="Имя" required>
+            </div>
+            <div class="input-field">
+                <input id="phone" type="text" placeholder="Номер телефона" required>
+            </div>
+            <div class="button-wrapper">
+                <button type="button" class="transparent-button" id="blog">Отправить</button>
+            </div>
+        </form>
     </div>
 </div>
 
