@@ -1,4 +1,6 @@
-
+$(window).on('load', function() {
+    $('.preloader').delay(1000).fadeOut('fast');
+});
 $(document).ready(function(){
     $(".arrow-top").hide();
 
