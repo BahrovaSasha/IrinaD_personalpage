@@ -68,6 +68,11 @@ body
 h1, h3, p
 	margin: 0
 
+button
+	cursor: pointer
+	&:focus
+		outline: none
+
 .preloader
 	background-color: $main-color
 	z-index: 1000
@@ -96,8 +101,9 @@ h1, h3, p
 		opacity: 0
 
 .fixed
-	position: fixed
+	//position: fixed
 	width: 100%
+	overflow-y: hidden
 .main-header
 	transition: all .3s linear
 	position: fixed
@@ -361,6 +367,12 @@ main
 					font-size: 4rem
 				//@include md
 				//	font-size: 4.4rem
+			.default-info
+				width: 80%
+				@include xl
+					width: 90%
+				@include lg
+					width: 100%
 			.buy-button
 				background: none
 				border: none
@@ -438,13 +450,8 @@ main
 	color: $default-text-color
 	margin: 0
 	padding: 3.2rem 0 1.4rem
-	width: 80%
 	@include rwd(1400)
 		padding: 1.4rem 0
-	@include xl
-		width: 90%
-	@include lg
-		width: 100%
 	@include md
 		font-size: 1.6rem
 
@@ -467,6 +474,12 @@ main
 		padding: 0 6rem 0
 	@include sm
 		padding: 0 4rem 0 6rem
+	.default-info
+		width: 80%
+		@include xl
+			width: 90%
+		@include lg
+			width: 100%
 .about-me-section_right
 	padding: 0 10rem 4rem 1rem
 	height: 400px
@@ -588,6 +601,12 @@ main
 	@include md
 		width: 100%
 		padding: 0
+	.default-info
+		width: 80%
+		@include xl
+			width: 90%
+		@include lg
+			width: 100%
 .subscribe-section_right
 	width: 50%
 	display: flex
@@ -608,8 +627,16 @@ main
 		@include md
 			width: 76%
 			padding-bottom: 0
+			justify-content: flex-start
 		@include sm
 			width: 100%
+		.input-field
+			padding-right: 2rem
+			@include md
+				width: auto
+			input
+				background: #eee
+
 
 
 .gallery-section
@@ -740,6 +767,7 @@ main
 		padding: 10rem 0 10rem 16rem
 		display: flex
 		flex-direction: column
+		align-items: flex-start
 		.default-info
 			cursor: pointer
 		@include xl
@@ -798,9 +826,11 @@ footer
 	.default-info
 		color: $accent
 		padding: 6rem
+		white-space: nowrap
 		@include md
 			padding: 2rem 1.4rem
 			font-size: 1.4rem
+
 	button
 		background: none
 		border: none
@@ -808,7 +838,6 @@ footer
 		font-size: 1.8rem
 		text-align: right
 		color: $accent
-		width: 100%
 		cursor: pointer
 		@include md
 			font-size: 1.4rem

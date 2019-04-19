@@ -159,8 +159,11 @@
         <div class="subscribe-section_right">
             <h3 class="default-head">Получить видео и подписаться</h3>
             <div class="buttons-wrap">
-                <button type="button" class="main-button" id="facebook-btn">Facebook</button>
-                <button type="button" class="main-button" id="email-btn">Email</button>
+                <!--<button type="button" class="main-button" id="facebook-btn">Facebook</button>-->
+                <div class="input-field">
+                    <input name="email" type="text" placeholder="Электронная почта" required>
+                </div>
+                <button type="button" class="main-button" id="email-btn">Send email</button>
             </div>
         </div>
     </section>
@@ -224,7 +227,7 @@
                     <iframe></iframe>
                 </div>
             </div>
-            <button type="button" class="main-button" id="client-btn">Хочу стать клиентом</button>
+            <button type="button" class="main-button client-button" id="client-btn">Хочу стать клиентом</button>
             <div class="facebook-subscribe">
                 <div class="fb-page" data-href="https://m.facebook.com/irinadarsiofficial" data-small-header="false" data-width="600" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://m.facebook.com/irinadarsiofficial" class="fb-xfbml-parse-ignore"><a href="https://m.facebook.com/irinadarsiofficial">Ирина Дарси - Дар Силы</a></blockquote></div>
             </div>
@@ -265,8 +268,8 @@
 
 <footer>
     <p class="default-info">Irina Darsi &#169;</p>
-    <div class="default-info">
-            <button type="button">Хочу стать клиентом</button>
+    <div class="default-info button-wrapper">
+            <button type="button" class="client-button">Хочу стать клиентом</button>
     </div>
 
 </footer>

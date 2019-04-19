@@ -26,7 +26,7 @@ $(document).ready(function(){
                $('body,html').animate({scrollTop: 0}, 800);
            });
        });
-    $('#call-btn').click(function() {
+    $(document).on('click', '#call-btn, .client-button', function() {
         $('.order-call-popup').addClass('active');
         $('body').addClass('fixed');
     });

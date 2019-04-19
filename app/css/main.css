@@ -2079,6 +2079,11 @@ body {
 h1, h3, p {
   margin: 0; }
 
+button {
+  cursor: pointer; }
+  button:focus {
+    outline: none; }
+
 .preloader {
   background-color: #FFE6E6;
   z-index: 1000;
@@ -2128,8 +2133,8 @@ h1, h3, p {
     opacity: 0; } }
 
 .fixed {
-  position: fixed;
-  width: 100%; }
+  width: 100%;
+  overflow-y: hidden; }
 
 .main-header {
   -webkit-transition: all .3s linear;
@@ -2504,6 +2509,14 @@ main {
       @media only screen and (max-width: 350px) {
         .main-section .main-section_left .top-info h1 {
           font-size: 4rem; } }
+    .main-section .main-section_left .top-info .default-info {
+      width: 80%; }
+      @media only screen and (max-width: 1200px) {
+        .main-section .main-section_left .top-info .default-info {
+          width: 90%; } }
+      @media only screen and (max-width: 992px) {
+        .main-section .main-section_left .top-info .default-info {
+          width: 100%; } }
     .main-section .main-section_left .top-info .buy-button {
       background: none;
       border: none;
@@ -2611,17 +2624,10 @@ main {
 .default-info {
   color: rgba(0, 0, 0, 0.8);
   margin: 0;
-  padding: 3.2rem 0 1.4rem;
-  width: 80%; }
+  padding: 3.2rem 0 1.4rem; }
   @media (max-width: 1400px) {
     .default-info {
       padding: 1.4rem 0; } }
-  @media only screen and (max-width: 1200px) {
-    .default-info {
-      width: 90%; } }
-  @media only screen and (max-width: 992px) {
-    .default-info {
-      width: 100%; } }
   @media only screen and (max-width: 768px) {
     .default-info {
       font-size: 1.6rem; } }
@@ -2657,6 +2663,14 @@ main {
   @media only screen and (max-width: 576px) {
     .about-me-section_left {
       padding: 0 4rem 0 6rem; } }
+  .about-me-section_left .default-info {
+    width: 80%; }
+    @media only screen and (max-width: 1200px) {
+      .about-me-section_left .default-info {
+        width: 90%; } }
+    @media only screen and (max-width: 992px) {
+      .about-me-section_left .default-info {
+        width: 100%; } }
 
 .about-me-section_right {
   padding: 0 10rem 4rem 1rem;
@@ -2824,6 +2838,14 @@ main {
     .subscribe-section_left {
       width: 100%;
       padding: 0; } }
+  .subscribe-section_left .default-info {
+    width: 80%; }
+    @media only screen and (max-width: 1200px) {
+      .subscribe-section_left .default-info {
+        width: 90%; } }
+    @media only screen and (max-width: 992px) {
+      .subscribe-section_left .default-info {
+        width: 100%; } }
 
 .subscribe-section_right {
   width: 50%;
@@ -2861,10 +2883,21 @@ main {
     @media only screen and (max-width: 768px) {
       .subscribe-section_right .buttons-wrap {
         width: 76%;
-        padding-bottom: 0; } }
+        padding-bottom: 0;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; } }
     @media only screen and (max-width: 576px) {
       .subscribe-section_right .buttons-wrap {
         width: 100%; } }
+    .subscribe-section_right .buttons-wrap .input-field {
+      padding-right: 2rem; }
+      @media only screen and (max-width: 768px) {
+        .subscribe-section_right .buttons-wrap .input-field {
+          width: auto; } }
+      .subscribe-section_right .buttons-wrap .input-field input {
+        background: #eee; }
 
 .gallery-section {
   padding: 10rem;
@@ -3038,7 +3071,11 @@ main {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
     .contacts-section .contacts-section_left .default-info {
       cursor: pointer; }
     @media only screen and (max-width: 1200px) {
@@ -3116,7 +3153,8 @@ footer {
           justify-content: space-between; }
   footer .default-info {
     color: #590011;
-    padding: 6rem; }
+    padding: 6rem;
+    white-space: nowrap; }
     @media only screen and (max-width: 768px) {
       footer .default-info {
         padding: 2rem 1.4rem;
@@ -3128,7 +3166,6 @@ footer {
     font-size: 1.8rem;
     text-align: right;
     color: #590011;
-    width: 100%;
     cursor: pointer; }
     @media only screen and (max-width: 768px) {
       footer button {
