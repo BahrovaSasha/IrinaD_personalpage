@@ -52,24 +52,9 @@ $(document).ready(function(){
             }
         ]
     });
-/*
-    $('#call-btn').click(function() {
-        $('.order-call-popup').show(1000);
-        $('body').addClass('fixed');
-    });
-    $('.close-call-popup').click(function(){
-        $('.order-call-popup').hide(1000);
-        $('body').removeClass('fixed');
-    });
-*/
 
-/*
-    $('#call-btn').click(function() {
-        $('.order-call-popup').addClass('active', function () {
-            $(this).fadeTo({duration:1000},{opacity:[0,1]});
-        });
-        $('body').addClass('fixed');
-    });*/
+
+
 
 });
 
