@@ -1,4 +1,31 @@
 $(document).ready(function(){
+    //subscribe email form
+    var sendEmail = 0;
+    $(document).on('click', '.subscribe-email-btn', function(){
+        var userSubscribeemail = {
+            email: $('.subscribe-email-item').val()
+        };
+        if (userSubscribeemail.email == '' && $('.subscribe-email-item').next().text() == '') {
+            $('.subscribe-email-item').next().text('Извините, это обязательное поле');
+            sendEmail +=1;
+        }
+        if (sendEmail == 0) {
+            $.ajax({
+                type: 'post',
+                data: userSubscribeemail,
+                url: baseUrl + '',
+                dataType: 'json',
+                success: function(data) {
+                    if (data == 1) {
+                        $('.subscribe-submit').text('Проверьте почтовый ящик');
+                    } else {
+                        $('.subscribe-error-general').text('Произошла ошибка, попробуйте еще раз');
+                    }
+                }
+            });
+        }
+    });
+    //contacts form
     var errors = 0;
     $(document).on('click', '.send-contact-form', function() {
         var userData = {

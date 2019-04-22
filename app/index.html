@@ -42,7 +42,7 @@
         <!--</button>-->
     </div>
     <div class="socials-links">
-        <a href="">
+        <a href="https://www.facebook.com/irinadarsiofficial/" target="_blank">
             <i class="fab fa-facebook-f"></i>
         </a>
         <a href="">
@@ -161,9 +161,12 @@
             <div class="buttons-wrap">
                 <!--<button type="button" class="main-button" id="facebook-btn">Facebook</button>-->
                 <div class="input-field">
-                    <input name="email" type="text" placeholder="Электронная почта" required>
+                    <span class="error-message subscribe-error-general"></span>
+                    <span class="submit-message subscribe-submit"></span>
+                    <input name="email" type="text" class="subscribe-email-item" placeholder="Электронная почта" required>
+                    <span class="error-message"></span>
                 </div>
-                <button type="button" class="main-button" id="email-btn">Send email</button>
+                <button type="button" class="main-button subscribe-email-btn" >Send email</button>
             </div>
         </div>
     </section>
