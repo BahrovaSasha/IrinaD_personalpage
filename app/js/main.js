@@ -25,6 +25,7 @@ $(document).ready(function(){
             });
         }
     });
+
     //contacts form
     var errors = 0;
     $(document).on('click', '.send-contact-form', function() {
@@ -33,7 +34,7 @@ $(document).ready(function(){
             email: $('.contacts-form-item:eq(1)').val(),
             message: $('.contacts-form-item:eq(2)').val()
         };
-        if (userData.name == '' && $('.contacts-form-item:eq(0)').next().text() == '') {
+        /*if (userData.name == '' && $('.contacts-form-item:eq(0)').next().text() == '') {
             $('.contacts-form-item:eq(0)').next().text('Извините, это обязактельное поле');
             errors += 1; //errors = errors + 1
         }
@@ -44,6 +45,13 @@ $(document).ready(function(){
         if (userData.message == '' && $('.contacts-form-item:eq(2)').next().text() == '') {
             $('.contacts-form-item:eq(2)').next().text('Извините, это обязактельное поле');
             errors += 1;
+        }*/
+
+        for (var i = 0; i < 2; i++) {
+            if ($('.contacts-form-item:eq(' + i + ')').val() == '' && $('.contacts-form-item:eq(' + i + ')').next().text() == '') {
+                $('.contacts-form-item:eq(' + i + ')').next().text('Извините, это обязактельное поле');
+                popupErrors += 1;
+            }
         }
 
 
